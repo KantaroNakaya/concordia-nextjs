@@ -1,0 +1,36 @@
+.listWrapper {
+    display: block;
+}
+.list {
+    width: 80%;
+    margin: 0 auto;
+}
+.list:first-child{
+    border-top: 1px solid #8c7e72;
+}
+.listMargin{
+    margin-bottom: 32px;
+    border-top: 1px solid #8c7e72;
+}
+.list:nth-child(odd) {
+    background-color: rgba(140, 126, 114, 0.1);
+}
+.list:nth-child(even) {
+    background-color: rgba(184, 217, 115, 0.1);
+}
+.listInner {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2px 0;
+    border-bottom: 1px solid #8c7e72;
+}
+.listDate {
+    width: 30%;
+    text-align: center;
+    line-height: 1.4;
+}
+.listTitle {
+    width: 70%;
+    line-height: 1.4;
+}

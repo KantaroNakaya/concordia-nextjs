@@ -1,0 +1,115 @@
+.footer_top {
+    width: 100%;
+    display: flex;
+}
+@media screen and (max-width: 1080px) {
+    .footer_top {
+        display: block;
+        width: 100%;
+    }
+}
+
+.footer_box {
+    width: 50%;
+    padding: 64px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.footer_box_title {
+    font-family: "Cinzel", serif;
+    font-size: 32px;
+    color: #594a3c;
+    text-shadow: 1px 1px 1px #594a3c;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.snsBox {
+    background: radial-gradient(
+        #fff,
+        rgba(184, 217, 115, 0.1) 40%,
+        rgba(136, 166, 73, 0.1)
+    );
+}
+@media screen and (max-width: 1080px) {
+    .snsBox {
+        width: 100%;
+    }
+}
+
+.reserveBox {
+    background: radial-gradient(
+        #fff,
+        rgba(255, 199, 120, 0.1) 40%,
+        rgba(255, 90, 96, 0.1)
+    );
+}
+@media screen and (max-width: 1080px) {
+    .reserveBox {
+        width: 100%;
+    }
+}
+
+.icon_link {
+    display: flex;
+    width: 33.3%;
+    margin: 0 auto;
+    padding: 16px 0;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed;
+}
+
+.snsLink_list {
+    width: 50%;
+    margin: 16px auto;
+    display: flex;
+}
+
+.footer_box_text {
+    padding: 8px;
+    text-align: center;
+}
+
+.footer_bottom {
+    padding: 64px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.footerLogo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 80px;
+}
+.footerLogo a {
+    font-family: "Dancing Script", cursive;
+    font-size: 36px;
+    color: #f2f2f2;
+    text-shadow: 3px 3px 1px #594a3c;
+}
+
+.copyright p {
+    text-align: center;
+    padding: 32px 0;
+    font-size: 8px;
+}
+.icon_brands {
+    color: #594a3c;
+}
+
+.icon_twitter:hover {
+    color: #00aced;
+}
+
+.icon_instagram:hover {
+    color: #3f729b;
+}
+
+.icon_facebook:hover {
+    color: #3b5998;
+}
+
+.icon_airbnb:hover {
+    color: rgb(255, 90, 96);
+}
