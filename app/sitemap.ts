@@ -1,29 +1,34 @@
 import { MetadataRoute } from "next";
-import { getAllCategoryList, getAllNewsList } from "./_libs/microcms";
+import { getNewsList } from "./_libs/microcms";
+import { getCategoryList } from "./_libs/microcms";
 
-const buildurl = (path?: string) => `http://localhost:3000${path ?? ""}`;
+const buildurl = (path: string) => {
+    return `${
+        process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+    }${path}`;
+};
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
-    const newsContents = await getAllNewsList();
-    const categoryContents = await getAllCategoryList();
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const { contents: newsContents } = await getNewsList();
+    const { contents: categoryContents } = await getCategoryList();
 
-    const newsUrls: MetadataRoute.Sitemap =
-    newsContents.map((content) => ({
+    const newsUrls: MetadataRoute.Sitemap = newsContents.map((content) => ({
         url: buildurl(`/news/${content.id}`),
         lastModified: content.revisedAt,
     }));
 
-    const categoryUrls: MetadataRoute.Sitemap=
-    categoryContents.map((content) => ({
-        url: buildurl(`/news/category/${content.id}`),
-        lastModified: content.revisedAt,
-    }));
+    const categoryUrls: MetadataRoute.Sitemap = categoryContents.map(
+        (content) => ({
+            url: buildurl(`/news/category/${content.id}`),
+            lastModified: content.revisedAt,
+        })
+    );
 
     const now = new Date();
 
-    return[
+    return [
         {
-            url: buildurl(),
+            url: buildurl(""),
             lastModified: now,
         },
         {

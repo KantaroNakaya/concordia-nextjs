@@ -1,20 +1,18 @@
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
 import Image from "next/image";
-import { getNewsList } from "@/app/_libs/microcms";
+import NewsList from "@/app/_components/NewsList";
+import ButtonLink from "@/app/_components/ButtonLink";
+import ImageSwiper from "@/app/_components/ImageSwiper";
+import { roomImages, morningImages } from "@/app/_constants/images";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
-import NewsList from "./_components/NewsList";
-import ButtonLink from "./_components/ButtonLink";
-import ImageSwiper from "./_components/ImageSwiper";
-import { roomImages, morningImages } from "./_constants/images";
+import { getNewsList } from "./_libs/microcms";
 
 export const revalidate = 60;
 
 export default async function Home() {
-    const name = "nakaya";
     const data = await getNewsList({
         limit: TOP_NEWS_LIMIT,
     });
-
     return (
         <>
             <section className={styles.topSection}>
@@ -52,10 +50,10 @@ export default async function Home() {
             <section className={styles.topSection}>
                 <h2 className={styles.topSectionTitle}>NEWS</h2>
                 <div className={styles.newsList}>
-                    <NewsList showContent={false} />
+                    <NewsList news={data.contents} showContent={false} />
                 </div>
                 <div className={styles.button}>
-                    <ButtonLink href="/news">もっと見る</ButtonLink>
+                    <ButtonLink href="/news">他のニュース記事も見る＞＞</ButtonLink>
                 </div>
             </section>
             <section className={styles.topSection}>
@@ -66,14 +64,8 @@ export default async function Home() {
                         部屋は日差しの入る間取りとなっており、大阪中心地に居ながら自然な気持ちで快適に過ごすことができます。
                     </p>
                 </div>
-            </section>
-            <section className={styles.topSection}>
-                <h2 className={styles.topSectionTitle}>MORNING</h2>
-                <div className={styles.photoBox}>
-                    <ImageSwiper images={morningImages} />
-                    <p className={styles.photoBox_text}>
-                        CONCORDIAのモーニングではパンとフルーツが特に人気です。パンに関しては一流の職人と最先端の機械が協業することで「一級品のパン」を提供させていただいております。
-                    </p>
+                <div className={styles.button}>
+                    <ButtonLink href="/rooms">部屋紹介を見る＞＞</ButtonLink>
                 </div>
             </section>
         </>

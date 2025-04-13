@@ -1,0 +1,65 @@
+
+import Image from "next/image";
+import styles from "./index.module.css";
+import { getRoomsList } from "@/app/_libs/microcms";
+import { ROOMS_LIST_LIMIT } from "@/app/_constants";
+import type { Room } from "@/app/_libs/microcms";
+
+type Props ={
+    rooms: Room[];
+}
+
+export default function RoomList({ rooms }: Props) {
+    if (rooms.length === 0) {
+        return <p>部屋情報はありません。</p>;
+    }
+    return (
+        <div className={styles.container}>
+        <ul>
+            {rooms.map((room) => (
+                <li key={room.id} className={styles.roomList}>
+                    <div className={styles.image}>
+                        <Image
+                            src={room.image.url}
+                            alt=""
+                            width="320"
+                            height="180"
+                        />
+                    </div>
+                    <p className={styles.name}>{room.name}</p>
+                    <table className={styles.infoTable}>
+                        <tbody>
+                            <tr>
+                                <th className={styles.price}>価格</th>
+                                <td>
+                                    {room.price.toLocaleString(
+                                        "ja-JP",
+                                        {
+                                            style: "currency",
+                                            currency: "JPY",
+                                        }
+                                    )}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th className={styles.size}>面積</th>
+                                <td>{room.size}㎡</td>
+                            </tr>
+                            <tr>
+                                <th className={styles.size}>
+                                    収容可能
+                                </th>
+                                <td>{room.capacity}名</td>
+                            </tr>
+                            <tr>
+                                <th className={styles.desc}>詳細</th>
+                                <td>{room.desc}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            ))}
+        </ul>
+        </div>
+    );
+}

@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 import { getNewsList } from "@/app/_libs/microcms";
-import NewsList from "@/app/_components/NewsList";
 import { notFound } from "next/navigation";
 import { NEWS_LIST_LIMIT } from "@/app/_constants";
+import NewsList from "@/app/_components/NewsList";
 import Pagination from "@/app/_components/Pagination";
 import ButtonLink from "@/app/_components/ButtonLink";
 
@@ -30,10 +30,10 @@ export default async function Page({ params }: Props) {
 
     return (
         <>
-            <NewsList />
+            <NewsList news={news} />
             <Pagination totalCount={totalCount} current={current} />
             <div className={styles.button}>
-                <ButtonLink href="/">トップへ戻る</ButtonLink>
+                <ButtonLink href="/">＜＜トップへ戻る</ButtonLink>
             </div>
         </>
     );

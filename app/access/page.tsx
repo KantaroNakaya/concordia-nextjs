@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { getMembersList } from "@/app/_libs/microcms";
-import { MEMBERS_LIST_LIMIT } from "@/app/_constants";
 import styles from "./page.module.css";
 import PageTitle from "../_components/PageTitle";
 
-export default async function Page() {
-    const data = await getMembersList({ limit: MEMBERS_LIST_LIMIT });
+export default function Page() {
     return (
         <div>
             <PageTitle>ACCESS</PageTitle>

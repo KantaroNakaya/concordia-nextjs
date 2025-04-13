@@ -1,0 +1,38 @@
+.container {
+    width: 80%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.roomList {
+    margin-bottom: 48px;
+}
+.image{
+    margin-bottom: 16px;
+    text-align: center;
+}
+.infoList {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.name {
+    margin-bottom: 32px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+.infoTable {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+.infoTable tr {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+}
+.infoTable th,
+.infoTable td {
+    padding: 8px;
+    border: 1px solid #333;
+}
