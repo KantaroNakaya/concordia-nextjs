@@ -36,19 +36,39 @@ export default function ContactForm() {
             action={formAction}
             onSubmit={handleSubmit}
         >
-            <div className={styles.formItem}>
-                <label className={styles.formItemLabel} htmlFor="name">
-                    <span className={styles.formItemLabelText}>お名前</span>
-                    <span className={styles.formItemLabelRequired}>必須</span>
-                </label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className={styles.formItemInput}
-                    placeholder="例）山田太郎"
-                />
+            <div className={styles.formItemName}>
+                <div className={styles.formItem}>
+                    <label className={styles.formItemLabel} htmlFor="name">
+                        <span className={styles.formItemLabelText}>姓</span>
+                        <span className={styles.formItemLabelRequired}>
+                            必須
+                        </span>
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className={styles.formItemInput}
+                        placeholder="例）山田"
+                    />
+                </div>
+                <div className={styles.formItem}>
+                    <label className={styles.formItemLabel} htmlFor="name">
+                        <span className={styles.formItemLabelText}>名</span>
+                        <span className={styles.formItemLabelRequired}>
+                            必須
+                        </span>
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className={styles.formItemInput}
+                        placeholder="例）太郎"
+                    />
+                </div>
             </div>
             <div className={styles.formItem}>
                 <label className={styles.formItemLabel} htmlFor="email">
@@ -80,7 +100,7 @@ export default function ContactForm() {
             </div>
             <div className={styles.formItem}>
                 <label
-                    className={styles.formItemLabel + " " + styles.isMsg}
+                    className={styles.formItemLabel}
                     htmlFor="message"
                 >
                     <span className={styles.formItemLabelText}>
