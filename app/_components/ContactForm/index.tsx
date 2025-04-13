@@ -31,57 +31,65 @@ export default function ContactForm() {
         );
     }
     return (
-        <div className={styles.form}>
+        <form className={styles.form} action={formAction}>
             <div className={styles.formItem}>
-                <p className={styles.formItemLabel}>
+                <label className={styles.formItemLabel} htmlFor="name">
+                    <span className={styles.formItemLabelText}>お名前</span>
                     <span className={styles.formItemLabelRequired}>必須</span>
-                    お名前
-                </p>
+                </label>
                 <input
                     type="text"
+                    id="name"
                     className={styles.formItemInput}
                     placeholder="例）山田太郎"
                 />
             </div>
             <div className={styles.formItem}>
-                <p className={styles.formItemLabel}>
+                <label className={styles.formItemLabel} htmlFor="email">
+                    <span className={styles.formItemLabelText}>メールアドレス</span>
                     <span className={styles.formItemLabelRequired}>必須</span>
-                    電話番号
-                </p>
-                <input
-                    type="text"
-                    className={styles.formItemInput}
-                    placeholder="例）000-0000-0000"
-                />
-            </div>
-            <div className={styles.formItem}>
-                <p className={styles.formItemLabel}>
-                    <span className={styles.formItemLabelRequired}>必須</span>
-                    メールアドレス
-                </p>
+                </label>
                 <input
                     type="email"
+                    id="email"
                     className={styles.formItemInput}
                     placeholder="例）example@gmail.com"
                 />
             </div>
             <div className={styles.formItem}>
-                <p className={styles.formItemLabel + " " + styles.isMsg}>
+                <label className={styles.formItemLabel} htmlFor="phone">
+                    <span className={styles.formItemLabelText}>電話番号</span>
+                </label>
+                <input
+                    type="text"
+                    id="phone"
+                    className={styles.formItemInput}
+                    placeholder="例）00000000000"
+                />
+            </div>
+            <div className={styles.formItem}>
+                <label
+                    className={styles.formItemLabel + " " + styles.isMsg}
+                    htmlFor="message"
+                >
+                    <span className={styles.formItemLabelText}>お問い合わせ内容</span>
                     <span className={styles.formItemLabelRequired}>必須</span>
-                    お問い合わせ内容
-                </p>
-                <textarea className={styles.formItemTextarea}></textarea>
+                </label>
+                <textarea
+                    id="message"
+                    className={styles.formItemTextarea}
+                ></textarea>
             </div>
-            <div className={styles.demoNote}>
-                <p className={styles.demoNoteText}>
-                    本サイトはデモサイトのため、
-                    <br className="pc" />
-                    実際に問い合わせを送信することはできません。
-                    <br className="pc" />
-                    ご了承ください。
-                </p>
+            <div className={styles.actions}>
+                {state.status === "error" && (
+                    <p className={styles.error}>{state.message}</p>
+                )}
+                <input
+                    type="submit"
+                    className={styles.formBtn}
+                    value="送信する"
+                />
             </div>
-            <input type="submit" className={styles.formBtn} value="送信する" />
-        </div>
+        </form>
     );
 }
