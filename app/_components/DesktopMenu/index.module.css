@@ -8,7 +8,7 @@
     text-shadow: 1px 1px 1px #f2f2f2;
     font-size: 18px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
     .pcMenu {
         display: none;
     }
