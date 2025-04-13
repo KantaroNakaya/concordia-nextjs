@@ -31,7 +31,11 @@ export default function ContactForm() {
         );
     }
     return (
-        <form className={styles.form} action={formAction}>
+        <form
+            className={styles.form}
+            action={formAction}
+            onSubmit={handleSubmit}
+        >
             <div className={styles.formItem}>
                 <label className={styles.formItemLabel} htmlFor="name">
                     <span className={styles.formItemLabelText}>お名前</span>
@@ -40,18 +44,24 @@ export default function ContactForm() {
                 <input
                     type="text"
                     id="name"
+                    name="name"
+                    required
                     className={styles.formItemInput}
                     placeholder="例）山田太郎"
                 />
             </div>
             <div className={styles.formItem}>
                 <label className={styles.formItemLabel} htmlFor="email">
-                    <span className={styles.formItemLabelText}>メールアドレス</span>
+                    <span className={styles.formItemLabelText}>
+                        メールアドレス
+                    </span>
                     <span className={styles.formItemLabelRequired}>必須</span>
                 </label>
                 <input
                     type="email"
                     id="email"
+                    name="email"
+                    required
                     className={styles.formItemInput}
                     placeholder="例）example@gmail.com"
                 />
@@ -63,6 +73,7 @@ export default function ContactForm() {
                 <input
                     type="text"
                     id="phone"
+                    name="phone"
                     className={styles.formItemInput}
                     placeholder="例）00000000000"
                 />
@@ -72,11 +83,15 @@ export default function ContactForm() {
                     className={styles.formItemLabel + " " + styles.isMsg}
                     htmlFor="message"
                 >
-                    <span className={styles.formItemLabelText}>お問い合わせ内容</span>
+                    <span className={styles.formItemLabelText}>
+                        お問い合わせ内容
+                    </span>
                     <span className={styles.formItemLabelRequired}>必須</span>
                 </label>
                 <textarea
                     id="message"
+                    name="message"
+                    required
                     className={styles.formItemTextarea}
                 ></textarea>
             </div>
