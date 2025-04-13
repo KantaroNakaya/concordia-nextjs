@@ -3,6 +3,11 @@
     max-width: 640px;
     margin: 64px auto;
 }
+@media (max-width: 768px) {
+    .container{
+        width: 100%;
+    }
+}
 .title {
     font-size: 1.8rem;
     margin-bottom: 24px;

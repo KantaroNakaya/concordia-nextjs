@@ -5,6 +5,11 @@
     width: 80%;
     margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+    .list{
+        width: 100%;
+    }
+}
 .list:first-child{
     border-top: 1px solid #8c7e72;
 }
@@ -21,15 +26,32 @@
     padding: 2px 0;
     border-bottom: 1px solid #8c7e72;
 }
+@media screen and (max-width: 768px) {
+    .listInner {
+        flex-direction: column;
+    }
+}
 .listDate {
     width: 30%;
-    padding-left: 3em;
+    padding-left: 1.6em;
     font-weight: 400;
     line-height: 1.4;
     text-align: left;
+}
+@media screen and (max-width: 768px) {
+    .listDate {
+        width: 100%;
+        padding-left: 1em;
+    }
 }
 .listTitle {
     width: 70%;
     font-weight: 400;
     line-height: 1.4;
+}
+@media screen and (max-width: 768px) {
+    .listTitle {
+        width: 100%;
+        padding-left: 1em;
+    }
 }
