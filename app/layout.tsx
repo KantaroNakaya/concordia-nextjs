@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import MainVisual from "./_components/MainVisual";
+import { Loader } from '@/app/_components/Loader';
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://localhost:3000"),
@@ -38,6 +39,7 @@ export default function RootLayout({
     return (
         <html lang="ja">
             <body>
+                <Loader />
                 <Header />
                 <main className="mainbox">
                     <MainVisual />
