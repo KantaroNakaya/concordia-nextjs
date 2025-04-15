@@ -28,7 +28,7 @@
     background: radial-gradient(
         #fff,
         rgba(184, 217, 115, 0.1) 40%,
-        rgba(136, 166, 73, 0.1)
+        rgba(var(--color-primary-rgb), 0.1)
     );
 }
 @media screen and (max-width: 1080px) {

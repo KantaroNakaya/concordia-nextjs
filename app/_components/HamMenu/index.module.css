@@ -9,7 +9,7 @@
         cursor: pointer;
         width: 50px;
         height: 50px;
-        background-color: rgba(136, 166, 73, 0.3);
+        background: rgba(var(--color-primary-rgb), 0.3);
         right: 3vw;
         top: 5px;
     }

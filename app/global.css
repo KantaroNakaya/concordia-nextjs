@@ -18,6 +18,16 @@ img {
 }
 
 /*-------------------------
+色の変数化
+-------------------------*/
+:root {
+    --color-primary: rgb(78, 93, 43);
+    --color-primary-rgb: 78, 93, 43;
+    --color-primary-contrast: #ffffff;
+    --color-primary-contrast-rgb: 255, 255, 255;
+}
+
+/*-------------------------
 共通クラスに対して
 -------------------------*/
 .pc {
@@ -46,7 +56,7 @@ img {
 .mainbox {
     width: 100%;
 }
-.childrenWrapper{
+.childrenWrapper {
     width: 80%;
     margin: 0 auto;
 }

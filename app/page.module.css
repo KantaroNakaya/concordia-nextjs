@@ -109,10 +109,10 @@
     min-width: 180px;
     padding: 2% 0;
     margin: 0 auto;
-    background-color: rgba(136, 166, 73, 0.1);
+    background: rgba(var(--color-primary-rgb), 0.1);
 }
 .newsBox a:hover {
-    background-color: rgba(136, 166, 73, 0.5);
+    background: rgba(var(--color-primary-rgb), 0.5);
 }
 
 .articleBox {
@@ -144,10 +144,10 @@
 .fa-chevron-right {
     padding-right: 1vw;
 }
-.newsList{
+.newsList {
     margin-bottom: 32px;
 }
-.button{
+.button {
     display: flex;
     justify-content: center;
 }
