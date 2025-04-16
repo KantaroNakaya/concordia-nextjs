@@ -7,7 +7,6 @@ import AnimatedSection from "@/app/_components/AnimatedSection";
 import { roomImages, morningImages } from "@/app/_constants/images";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import { getNewsList } from "./_libs/microcms";
-import { useInView } from "react-intersection-observer";
 
 export const revalidate = 60;
 
