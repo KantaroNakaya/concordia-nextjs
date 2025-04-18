@@ -12,7 +12,7 @@ export default async function Page() {
     });
     return (
         <>
-            <PageTitle>NEWS</PageTitle>
+            <PageTitle>ROOM</PageTitle>
             <RoomList rooms={roomsItems} />
             <div className={styles.button}>
                 <ButtonLink href="/">＜＜トップへ戻る</ButtonLink>
