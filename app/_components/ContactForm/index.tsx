@@ -38,7 +38,7 @@ export default function ContactForm() {
         >
             <div className={styles.formItemName}>
                 <div className={styles.formItem}>
-                    <label className={styles.formItemLabel} htmlFor="name">
+                    <label className={styles.formItemLabel} htmlFor="lastname">
                         <span className={styles.formItemLabelText}>姓</span>
                         <span className={styles.formItemLabelRequired}>
                             必須
@@ -46,15 +46,15 @@ export default function ContactForm() {
                     </label>
                     <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="lastname"
+                        name="lastname"
                         required
                         className={styles.formItemInput}
                         placeholder="例）山田"
                     />
                 </div>
                 <div className={styles.formItem}>
-                    <label className={styles.formItemLabel} htmlFor="name">
+                    <label className={styles.formItemLabel} htmlFor="firstname">
                         <span className={styles.formItemLabelText}>名</span>
                         <span className={styles.formItemLabelRequired}>
                             必須
@@ -62,8 +62,8 @@ export default function ContactForm() {
                     </label>
                     <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="firstname"
+                        name="firstname"
                         required
                         className={styles.formItemInput}
                         placeholder="例）太郎"

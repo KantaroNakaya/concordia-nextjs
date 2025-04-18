@@ -7,7 +7,9 @@ function validateEmail(email: string) {
 
 export async function createContactData(_prevState: any, formData: FormData) {
     const rawFormData = {
-        name: formData.get("name") as string,
+        name: `${formData.get("lastname")} ${formData.get(
+            "firstname"
+        )}` as string,
         email: formData.get("email") as string,
         message: formData.get("message") as string,
     };

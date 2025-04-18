@@ -1,3 +1,9 @@
+.success {
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+}
 .form {
     width: 100%;
     max-width: 720px;
@@ -18,10 +24,7 @@
 }
 @media screen and (max-width: 768px) {
     .formItem {
-        padding-left: 14px;
-        padding-right: 14px;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding: 14px 8px;
         flex-wrap: wrap;
     }
 }
@@ -32,7 +35,7 @@
 }
 @media screen and (max-width: 768px){
     .formItemName{
-        display: block;
+        grid-gap: 0;
     }
 }
 
@@ -47,9 +50,6 @@
 }
 @media screen and (max-width: 768px) {
     .formItemLabel {
-        display: flex;
-        max-width: inherit;
-        align-items: center;
         font-size: 15px;
     }
 }
@@ -86,8 +86,6 @@
 @media screen and (max-width: 768px) {
     .formItemInput {
         height: 40px;
-        margin-left: 0;
-        margin-top: 18px;
         font-size: 15px;
     }
 }
@@ -102,10 +100,7 @@
 }
 @media screen and (max-width: 768px) {
     .formItemTextarea {
-        margin-top: 18px;
-        margin-left: 0;
         height: 200px;
-        flex: inherit;
         font-size: 15px;
     }
 }
