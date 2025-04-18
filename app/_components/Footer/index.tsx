@@ -1,5 +1,12 @@
 import Link from "next/link";
 import styles from "./index.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faXTwitter,
+    faInstagram,
+    faFacebookF,
+    faAirbnb,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
     return (
@@ -12,22 +19,28 @@ export default function Footer() {
                     <h2 className={styles.footer_box_title}>SNS</h2>
                     <div className={styles.snsLink_list}>
                         <a className={styles.icon_link}>
-                            <i
-                                className={`${styles.icon_twitter} ${styles.icon_brands} fa-brands fa-3x fa-twitter`}
-                                aria-label="twitterロゴ"
-                            ></i>
+                            <FontAwesomeIcon
+                                icon={faXTwitter}
+                                className={styles.icon_brands}
+                                aria-label="X（旧Twitter）ロゴ"
+                                size="3x"
+                            />
                         </a>
                         <a className={styles.icon_link}>
-                            <i
-                                className={`${styles.icon_instagram} ${styles.icon_brands} fa-brands fa-3x fa-instagram`}
+                            <FontAwesomeIcon
+                                icon={faInstagram}
+                                className={styles.icon_brands}
                                 aria-label="instagramロゴ"
-                            ></i>
+                                size="3x"
+                            />
                         </a>
                         <a className={styles.icon_link}>
-                            <i
-                                className={`${styles.icon_facebook} ${styles.icon_brands} fa-brands fa-3x fa-facebook-f`}
+                            <FontAwesomeIcon
+                                icon={faFacebookF}
+                                className={styles.icon_brands}
                                 aria-label="facebookロゴ"
-                            ></i>
+                                size="3x"
+                            />
                         </a>
                     </div>
                     <p className={styles.footer_box_text}>
@@ -37,10 +50,12 @@ export default function Footer() {
                 <div className={`${styles.footer_box} ${styles.reserveBox}`}>
                     <h2 className={styles.footer_box_title}>RESERVE</h2>
                     <a className={styles.icon_link}>
-                        <i
-                            className={`${styles.icon_airbnb} ${styles.icon_brands} fa-brands fa-3x fa-airbnb`}
+                        <FontAwesomeIcon
+                            icon={faAirbnb}
+                            className={styles.icon_brands}
                             aria-label="airbnbロゴ"
-                        ></i>
+                            size="3x"
+                        />
                     </a>
                     <p className={styles.footer_box_text}>
                         当ホテルの予約はairbnbで行われております。

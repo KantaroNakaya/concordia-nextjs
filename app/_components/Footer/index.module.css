@@ -52,12 +52,17 @@
 
 .icon_link {
     display: flex;
-    width: 33.3%;
+    width: 20%;
+    max-width: 80px;
     margin: 0 auto;
     padding: 16px 0;
     justify-content: center;
     align-items: center;
     cursor: not-allowed;
+}
+.icon_link svg{
+    aspect-ratio: 1/1;
+    object-fit: contain;
 }
 
 .snsLink_list {
@@ -96,20 +101,4 @@
 }
 .icon_brands {
     color: #594a3c;
-}
-
-.icon_twitter:hover {
-    color: #00aced;
-}
-
-.icon_instagram:hover {
-    color: #3f729b;
-}
-
-.icon_facebook:hover {
-    color: #3b5998;
-}
-
-.icon_airbnb:hover {
-    color: rgb(255, 90, 96);
 }
