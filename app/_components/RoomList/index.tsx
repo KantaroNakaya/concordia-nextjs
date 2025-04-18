@@ -14,10 +14,10 @@ export default function RoomList({ rooms }: Props) {
     }
     return (
         <div className={styles.container}>
-            <ul>
+            <ul className={styles.listWrapper}>
                 {rooms.map((room) => (
-                    <li key={room.id} className={styles.roomList}>
-                        <div className={styles.roomListInner}>
+                    <li key={room.id} className={styles.list}>
+                        <div className={styles.listInner}>
                             <div className={styles.image}>
                                 <Image
                                     src={room.image.url}
@@ -28,7 +28,7 @@ export default function RoomList({ rooms }: Props) {
                             </div>
                             <p className={styles.name}>{room.name}</p>
                         </div>
-                        <div className={styles.roomListInner}>
+                        <div className={styles.listInner}>
                             <table className={styles.infoTable}>
                                 <tbody>
                                     <tr>
@@ -53,13 +53,12 @@ export default function RoomList({ rooms }: Props) {
                                         </th>
                                         <td>{room.capacity}名</td>
                                     </tr>
-                                    <tr>
-                                        <th className={styles.desc}>詳細</th>
-                                        <td>{room.desc}</td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
+                        <p className={styles.listDesc}>
+                            <span>{room.desc}</span>
+                        </p>
                     </li>
                 ))}
             </ul>

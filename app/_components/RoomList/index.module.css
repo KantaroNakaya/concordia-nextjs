@@ -3,28 +3,32 @@
     max-width: 800px;
     margin: 0 auto;
 }
-.roomList {
+.listWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 72px;
     gap: 32px;
 }
 @media (max-width: 768px) {
-    .roomList {
+    .listWrapper {
         display: block;
         gap: 0;
     }
 }
-.roomListInner {
+.list {
+    margin-bottom: 72px;
+    gap: 32px;
+}
+.listInner {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.image{
+.image {
     margin-bottom: 16px;
     text-align: center;
 }
 .name {
+    margin-bottom: 32px;
     font-size: 1.4rem;
     font-weight: 700;
     text-align: center;
@@ -35,10 +39,10 @@
     }
 }
 .infoTable {
-    width: 100%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 0 auto 32px;
     border-collapse: collapse;
-    border: 1px solid #333;
+    border: 0.4px solid #33333366;
 }
 .infoTable tr {
     display: grid;
@@ -47,5 +51,16 @@
 .infoTable th,
 .infoTable td {
     padding: 8px;
-    border: 1px solid #333;
+    border: 0.4px solid #33333366;
+}
+.listDesc {
+    width: 80%;
+    margin: 0 auto 32px;
+}
+.listDesc span {
+    text-decoration-color: #33333366;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    line-height: 1.6;
 }
