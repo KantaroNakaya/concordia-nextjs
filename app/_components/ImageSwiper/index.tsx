@@ -1,14 +1,13 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar } from "swiper/modules";
+import { Autoplay,EffectFade } from "swiper/modules";
 import Image from "next/image";
 
 // Swiperのスタイルをインポート
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/scrollbar";
-
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
 type ImageSwiperProps = {
     images: {
         src: string;
@@ -19,11 +18,11 @@ type ImageSwiperProps = {
 export default function ImageSwiper({ images }: ImageSwiperProps) {
     return (
         <Swiper
-            modules={[Navigation, Scrollbar]}
-            navigation
-            scrollbar={{ draggable: true }}
+            modules={[ Autoplay, EffectFade ]}
             spaceBetween={30}
             slidesPerView={1}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            effect="fade"
         >
             {images.map((image, index) => (
                 <SwiperSlide key={index}>
