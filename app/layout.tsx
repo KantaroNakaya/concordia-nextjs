@@ -2,7 +2,6 @@ import "./destyle.css";
 import "./global.css";
 import type { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import MainVisual from "./_components/MainVisual";
