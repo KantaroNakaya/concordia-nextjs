@@ -4,7 +4,7 @@ export default function TopHero() {
     return (
         <div className={styles.text}>
             <p className={styles.title}>便利と自然</p>
-            <p className={styles.subtitle}>相反する２つの概念が両立する</p>
+            <p className={styles.subtitle}>相反する２つの概念が両立</p>
             <p className={styles.description}>
                 圧倒的なアクセスの良さによる
                 <br />
