@@ -1,0 +1,7 @@
+.newsList {
+    margin-bottom: 32px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+}

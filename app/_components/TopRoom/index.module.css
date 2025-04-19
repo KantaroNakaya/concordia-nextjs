@@ -1,0 +1,21 @@
+
+.photoBox {
+    display: flex;
+    max-width: 480px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto 24px;
+}
+
+.photoBox_text {
+    margin: 8px auto;
+}
+@media screen and (max-width: 768px) {
+    .photoBox_text {
+        width: 100%;
+    }
+}
+.button {
+    display: flex;
+    justify-content: center;
+}
