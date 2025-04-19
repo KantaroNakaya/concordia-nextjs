@@ -1,0 +1,12 @@
+.section {
+    margin-bottom: 64px;
+}
+
+.title {
+    font-family: "Cinzel", serif;
+    font-size: 32px;
+    color: #594a3c;
+    text-shadow: 1px 1px 1px #594a3c;
+    text-align: center;
+    padding: 24px 0;
+}
