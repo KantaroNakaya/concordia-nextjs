@@ -1,11 +1,12 @@
-import "./destyle.css";
-import "./global.css";
+import "@/app/destyle.css";
+import "@/app/global.css";
 import type { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
-import Header from "./_components/Header";
-import Footer from "./_components/Footer";
-import MainVisual from "./_components/MainVisual";
-import { Loader } from '@/app/_components/Loader';
+import Header from "@/app/_components/Header";
+import Footer from "@/app/_components/Footer";
+import MainVisual from "@/app/_components/MainVisual";
+import { Loader } from "@/app/_components/Loader";
+import { Modal } from "@/app/_components/Modal";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://localhost:3000"),
@@ -45,6 +46,7 @@ export default function RootLayout({
                     <div className="childrenWrapper">{children}</div>
                 </main>
                 <Footer />
+                <Modal />
             </body>
             <GoogleTagManager gtmId="GTM-KQJ4KX4V" />
         </html>
