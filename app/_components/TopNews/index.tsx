@@ -11,7 +11,7 @@ export default async function TopNews() {
     });
     return (
         <div>   
-            <div className={styles.newsList}>
+            <div className={styles.wrapper}>
                 <NewsList news={data.contents} showContent={false} />
             </div>
             <div className={styles.button}>

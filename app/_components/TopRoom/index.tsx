@@ -6,9 +6,9 @@ import { roomImages } from "@/app/_constants/images";
 export default function TopRoom() {
     return (
         <div>
-            <div className={styles.photoBox}>
+            <div className={styles.wrapper}>
                 <ImageSwiper images={roomImages} />
-                <p className={styles.photoBox_text}>
+                <p className={styles.text}>
                     部屋は日差しの入る間取りとなっており、大阪中心地に居ながら自然な気持ちで快適に過ごすことができます。
                 </p>
             </div>
