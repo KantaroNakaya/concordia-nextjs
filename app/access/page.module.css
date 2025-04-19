@@ -1,31 +1,35 @@
 .map {
-    width: 80vw;
+    width: 80%;
     max-width: 800px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 48px;
 }
 .map iframe {
     width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3;
+}
+@media screen and (max-width: 768px) {
+    .map {
+        width: 100%;
+    }
 }
 
 .root {
     display: block;
     width: 60%;
     min-width: 480px;
-    margin: 0 auto;
-    padding: 3%;
+    margin: 0 auto 48px;
 }
 @media screen and (max-width: 768px) {
     .root {
-        width: 80%;
+        width: 100%;
         min-width: 0px;
-        margin: 0 auto;
-        padding: 3%;
     }
 }
 .root p {
-    padding: 3%;
-    margin: 3% 0;
+    padding: 4%;
+    margin: 4% 0;
 }
 .root p:nth-child(1) {
     background-color: rgba(184, 217, 115, 0.1);
