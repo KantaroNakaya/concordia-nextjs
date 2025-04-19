@@ -45,7 +45,12 @@ export async function createContactData(_prevState: any, formData: FormData) {
                 fields: [
                     {
                         objectTypeId: "0-1",
-                        name: "name",
+                        name: "lastname",
+                        value: rawFormData.name,
+                    },
+                    {
+                        objectTypeId: "0-1",
+                        name: "firstname",
                         value: rawFormData.name,
                     },
                     {
@@ -69,7 +74,7 @@ export async function createContactData(_prevState: any, formData: FormData) {
         console.log(e);
         return {
             status: "error",
-            message: "お問い合わせに失敗しました",
+            message: "お問い合わせに失敗しました。\nしばらく経ってから再度お試しください。",
         };
     }
 
