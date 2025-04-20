@@ -9,7 +9,7 @@ import { Loader } from "@/app/_components/Loader";
 import { Modal } from "@/app/_components/Modal";
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://localhost:3000"),
+    metadataBase: new URL("https://concordia-nextjs.vercel.app/"),
     title: {
         template: "%s | HOTEL CONCORDIA OSAKA",
         default: "HOTEL CONCORDIA OSAKA",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         images: ["/ogp.jpg"],
     },
     alternates: {
-        canonical: `http://localhost:3000`,
+        canonical: `https://concordia-nextjs.vercel.app/`,
     },
     robots: {
         index: false,
