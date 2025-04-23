@@ -8,11 +8,11 @@ export const Modal = () => {
 
     const handleClose = useCallback(() => {
         setIsOpen(false);
-        localStorage.setItem("modalShown", "true");
+        sessionStorage.setItem("modalShown", "true");
     }, []);
 
     useEffect(() => {
-        const hasModalBeenShown = localStorage.getItem("modalShown");
+        const hasModalBeenShown = sessionStorage.getItem("modalShown");
 
         if (!hasModalBeenShown) {
             const timer = setTimeout(() => {
@@ -33,12 +33,21 @@ export const Modal = () => {
             >
                 <ul className={styles.msgList}>
                     <li>当サイトは架空ホテルのデモサイトです。</li>
-                    <li><span className={styles.bold}>Next.js</span>（Reactフレームワーク）で作成しています。</li>
+                    <li>
+                        <span className={styles.bold}>Next.js</span>
+                        （Reactフレームワーク）で作成しています。
+                    </li>
                     <li>以下は詳細です。</li>
                 </ul>
                 <ul className={styles.msgList}>
-                    <li>・ニュースや部屋情報の更新には<span className={styles.bold}>MicroCMS</span>を使用</li>
-                    <li>・問い合わせ機能には<span className={styles.bold}>Hubspot</span>を使用</li>
+                    <li>
+                        ・ニュースや部屋情報の更新には
+                        <span className={styles.bold}>MicroCMS</span>を使用
+                    </li>
+                    <li>
+                        ・問い合わせ機能には
+                        <span className={styles.bold}>Hubspot</span>を使用
+                    </li>
                 </ul>
 
                 <button className={styles.closeButton} onClick={handleClose}>

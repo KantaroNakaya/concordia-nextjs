@@ -10,10 +10,10 @@ export const Loader = () => {
     const [isFirstVisit, setIsFirstVisit] = useState(false);
 
     useEffect(() => {
-        const hasVisited = localStorage.getItem("hasVisited");
+        const hasVisited = sessionStorage.getItem("hasVisited");
         if (!hasVisited) {
             setIsFirstVisit(true);
-            localStorage.setItem("hasVisited", "true");
+            sessionStorage.setItem("hasVisited", "true");
         }
     }, []);
 
