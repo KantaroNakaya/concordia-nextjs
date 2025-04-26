@@ -19,9 +19,7 @@ export const Loader = () => {
 
     useEffect(() => {
         if (isFirstVisit) {
-            const tl = gsap.timeline();
-
-            tl.to([leftRef.current, rightRef.current], {
+            gsap.to([leftRef.current, rightRef.current], {
                 duration: 1,
                 width: "0%",
                 ease: "power2.inOut",
