@@ -7,18 +7,18 @@ import styles from "./index.module.css";
 export const Loader = () => {
     const leftRef = useRef<HTMLDivElement>(null);
     const rightRef = useRef<HTMLDivElement>(null);
-    const [isFirstVisit, setIsFirstVisit] = useState(false);
+    const [showLoading, setShowLoading] = useState(false);
 
     useEffect(() => {
         const hasVisited = sessionStorage.getItem("hasVisited");
         if (!hasVisited) {
-            setIsFirstVisit(true);
+            setShowLoading(true);
             sessionStorage.setItem("hasVisited", "true");
         }
     }, []);
 
     useEffect(() => {
-        if (isFirstVisit) {
+        if (showLoading) {
             gsap.to([leftRef.current, rightRef.current], {
                 duration: 1,
                 width: "0%",
@@ -26,9 +26,9 @@ export const Loader = () => {
                 delay: 0.5,
             });
         }
-    }, [isFirstVisit]);
+    }, [showLoading]);
 
-    if (!isFirstVisit) return null;
+    if (!showLoading) return null;
 
     return (
         <div className={styles.loader}>
