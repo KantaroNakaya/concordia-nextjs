@@ -46,7 +46,6 @@ export default function RootLayout({
                     <div className="childrenWrapper">{children}</div>
                 </main>
                 <Footer />
-                <Modal />
             </body>
             <GoogleTagManager gtmId="GTM-KQJ4KX4V" />
         </html>
