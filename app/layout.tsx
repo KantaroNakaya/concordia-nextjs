@@ -6,7 +6,6 @@ import Header from "@/app/_components/Header";
 import Footer from "@/app/_components/Footer";
 import MainVisual from "@/app/_components/MainVisual";
 import { Loader } from "@/app/_components/Loader";
-import { Modal } from "@/app/_components/Modal";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://concordia-nextjs.vercel.app/"),
@@ -15,18 +14,18 @@ export const metadata: Metadata = {
         default: "HOTEL CONCORDIA OSAKA",
     },
     description:
-        "本サイトは架空のホテルのデモサイトです。デモサイトのため、noindexにしています。",
+        "本サイトは架空のホテルのデモサイトです。Next.jsとMicroCMSを使用しています。",
     openGraph: {
         title: `%s | HOTEL CONCORDIA OSAKA`,
         description:
-            "本サイトは架空のホテルのデモサイトです。デモサイトのため、noindexにしています。",
+            "本サイトは架空のホテルのデモサイトです。Next.jsとMicroCMSを使用しています。",
         images: ["/ogp.jpg"],
     },
     alternates: {
         canonical: `https://concordia-nextjs.vercel.app/`,
     },
     robots: {
-        index: false,
+        index: true,
         follow: true,
     },
 };
