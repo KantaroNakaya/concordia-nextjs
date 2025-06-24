@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import RoomList from "../_components/RoomList";
 import PageTitle from "../_components/PageTitle";
@@ -7,7 +6,7 @@ import { ROOMS_LIST_LIMIT } from "../_constants";
 import { getRoomsList } from "../_libs/microcms";
 
 export default async function Page() {
-    const { contents: roomsItems, totalCount } = await getRoomsList({
+    const { contents: roomsItems } = await getRoomsList({
         limit: ROOMS_LIST_LIMIT,
     });
     return (

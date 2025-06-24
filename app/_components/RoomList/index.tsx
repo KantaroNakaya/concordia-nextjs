@@ -1,7 +1,5 @@
 import Image from "next/image";
 import styles from "./index.module.css";
-import { getRoomsList } from "@/app/_libs/microcms";
-import { ROOMS_LIST_LIMIT } from "@/app/_constants";
 import type { Room } from "@/app/_libs/microcms";
 
 type Props = {
